@@ -1,0 +1,58 @@
+<script type="text/javascript">  
+        //json格式,这是只有一个人。   
+        var people = {firstname:"zhang1",lastname:"xxxx1",email:"kengni@125.com"};  
+  
+        alert(people.email);  
+  </script>  
+  
+  <script type="text/javascript">  
+    //如果有多个人是并列的，就相于一个数组，里面有多个人。  
+        var people = [  
+                {firstname:"zhang1",lastname:"xxxx1",email:"kengni@125.com"},  
+                {firstname:"zhang2",lastname:"xxxx2",email:"kengni@126.com"}  
+                ];  
+                alert(people[1].lastname);  
+  </script>  
+  
+  <script type="text/javascript">  
+    //如果有多个人是并列的，就相于一个数组，里面有多个人。其实都是key和value.  
+    //这个其实就是key就一个普通的key，而value不过是一个数组。  
+        var people = {param1:[  
+                    {firstname:"zhang1",lastname:"xxxx1",email:"kengni.com1"},  
+                    {firstname:"zhang2",lastname:"xxxx2",email:"kengni.com2"}  
+                ]};  
+        alert(people.param1[1].lastname);  
+  </script>  
+  
+  <script type="text/javascript">  
+    //就是一个数组。  
+        var people = [  
+                  
+                {"param1":[{firstname:"zhang11",lastname:"xxxx11",email:"kengni11.com"},  
+                {firstname:"zhang12",lastname:"xxxx12",email:"kengni12.com"}]},  
+                {"params2":[  
+                           {firstname:"zhang21",lastname:"xxxx21",email:"kengni21.com"},  
+                           {firstname:"zhang22",lastname:"xxxx22",email:"kengni22.com"}  
+                                    ]},  
+                {"params3":[  
+                           {firstname:"zhang31",lastname:"xxxx31",email:"kengni31.com"},  
+                           {firstname:"zhang32",lastname:"xxxx32",email:"kengni32.com"}  
+                        ]}    
+        ];  
+        alert(people[2].params3[0].lastname);  
+  </script>  
+  
+  <script type="text/javascript">  
+    //最普通的一个json格式 ，里面就像有复合的东西 。  
+            var people = {  
+            username:"zhang",  
+            age:20,  
+            info:{phone:"12123213",tel:"659999"},  
+            address:[  
+                {homeAddress:"北京",homeCode:12345778},  
+                {companyAddress:"河北",companyCode:1300000},  
+            ]  
+        };  
+        alert(people.info.tel);  
+        alert(people.address[1].companyCode);  
+  </script>  
